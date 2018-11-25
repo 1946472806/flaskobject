@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/register.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css"/>
+		<script src="/static/js/jquery.js"></script>
+        <script src="/static/js/jquery-form.js"></script>
+        <script src="/static/js/jquery.cookie.js"></script>
+        <script src="/static/js/bootstrap.js"></script>
+		<script src="/static/js/changinfo.js"></script>
+		<script src="/static/js/gVerify.js"></script>
+	</head>
+	<body>
+		<!--中间注册-->
+		<div class="reg relative">
+			<div class="reg_form absolute">
+				<form action="/api/v1/changinfo/" method="post" enctype="multipart/form-data" id="ajaxForm">
+                    <div class="form-group has-feedback" id="telephone" style=" margin-bottom: 5px;">
+                        <div class=" float_l input-group">
+                            <div class="input-group-addon">手机号</div>
+                            <input id="ipt1" class="form-control" type="text" name="telephone" placeholder="请输入手机号" value="" disabled/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <i></i>
+                    </div>
+
+                    <div class="clear" style="height: 10px"></div>
+
+
+                    <div class="form-group has-feedback" id="email" style="margin-bottom: 5px;">
+                        <div class="float_l  input-group">
+                            <div class="input-group-addon">@</div>
+                            <input id="ipt7" class="form-control" type="text" name="email" placeholder="输入邮箱@163.com"/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <i></i>
+                    </div>
+
+
+                    <div class="clear" style="height: 10px"></div>
+
+                    <div class="form-group" style="margin-bottom: 5px;">
+                        <div class="input-group">
+                            <div class="input-group-addon">头像</div>
+                            <input id="ipt3" type="file" class="form-control" name="filename">
+                        </div>
+                    </div>
+
+                    <div id="msg" style="text-align: center;color: red;font-size: 2rem;"></div>
+					<div class="regs">
+						<input id="ipt6" type="submit" style="cursor:pointer;outline:none;" value="提交">
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+
+	</body>
+
+</html>

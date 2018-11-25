@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/register.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css"/>
+		<script src="/static/js/jquery.js"></script>
+        <script src="/static/js/jquery-form.js"></script>
+        <script src="/static/js/bootstrap.js"></script>
+		<script src="/static/js/register.js"></script>
+		<script src="/static/js/gVerify.js"></script>
+	</head>
+	<body>
+		<!--中间注册-->
+		<div class="reg relative">
+			<div class="reg_form absolute">
+				<form action="/api/v1/register/" method="post" enctype="multipart/form-data" id="ajaxForm">
+                    <div class="form-group has-feedback" id="telephone" style=" margin-bottom: 5px;">
+                        <div class=" float_l input-group">
+                            <div class="input-group-addon">手机号</div>
+                            <input id="ipt1" class="form-control" type="text" name="telephone" placeholder="请输入常用手机号"/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <i></i>
+                    </div>
+
+                    <div class="clear" style="height: 10px"></div>
+
+
+                    <div class="form-group has-feedback" id="email" style="margin-bottom: 5px;">
+                        <div class="float_l  input-group">
+                            <div class="input-group-addon">@</div>
+                            <input id="ipt7" class="form-control" type="text" name="email" placeholder="输入邮箱@163.com"/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <i></i>
+                    </div>
+
+                    <div class="clear" style="height: 10px"></div>
+
+                    <div class="form-group has-feedback" id="yanid" style="position: relative;margin-bottom: 5px;">
+                        <div class="float_l input-group" style=" width:320px;height:48px;position: absolute;">
+                            <div class="input-group-addon">验证码</div>
+                            <input id="ipt2" class="form-control" type="text" placeholder="请输入验证码" style="height:48px;width:255px;"/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <div id="v_container" style="margin-left:1px;width:90px;height:48px;float: right;"></div>
+                        <i></i>
+                        <input id="fresh" type="button" value="换一张" style="float: right;width: 100px;height: 50px;font-size: 20px;">
+                    </div>
+
+					<div class="clear" style="height: 10px"></div>
+
+                    <div class="form-group has-feedback" id="passid" style="margin-bottom: 5px;">
+                        <div class="float_l  input-group">
+                            <div class="input-group-addon">密码</div>
+                            <input id="ipt4" class="form-control" type="password" name="password" placeholder="请输入密码"/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <i></i>
+                    </div>
+
+                    <div class="clear" style="height: 10px"></div>
+
+                    <div class="form-group has-feedback" id="passchid" style="margin-bottom: 5px;">
+                        <div class="float_l  input-group">
+                            <div class="input-group-addon">验证密码</div>
+                            <input id="ipt5" class="form-control" type="password" name="password" placeholder="再次输入密码"/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <i></i>
+                    </div>
+
+                    <div class="clear" style="height: 10px"></div>
+
+                    <div class="form-group has-feedback" id="name" style="margin-bottom: 5px;">
+                        <div class="float_l  input-group">
+                            <div class="input-group-addon">昵称</div>
+                            <input id="ipt8" class="form-control" type="text" name="name" placeholder="输入昵称"/>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <i></i>
+                    </div>
+
+                    <div class="clear" style="height: 10px"></div>
+
+                    <div class="form-group" style="margin-bottom: 5px;">
+                        <div class="input-group">
+                            <div class="input-group-addon">头像</div>
+                            <input id="ipt3" type="file" class="form-control" name="filename">
+                        </div>
+                    </div>
+
+                    <div id="msg" style="text-align: center;color: red;font-size: 2rem;"></div>
+					<div class="regs">
+						<input id="ipt6" type="submit" style="cursor:pointer;outline:none;" value="注册">
+					</div>
+					<div class="login" style="font-size:12px;">
+						已注册？
+						<a href="login.html" style="color:#669aca;">登录</a>
+					</div>
+				</form>
+
+			</div>
+			
+		</div>
+		
+
+	</body>
+
+</html>

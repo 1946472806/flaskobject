@@ -1,0 +1,91 @@
+.clear{
+	clear:both;
+}
+.relative{
+	position:relative;
+}
+.absolute{
+	position: absolute;
+}
+
+.reg_form{
+    top: 105px;
+    left: 30%;
+    width: 598px;
+    height: 598px;
+    background: #fff;
+    padding: 30px 40px;
+    background: #fff;
+    border: none;
+    box-shadow: 5px 5px 9px #eee;
+}
+
+.form-group{
+	width: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px;
+    color: #333;
+    margin-top:15px;
+
+}
+.input-group{
+	width: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px;
+    color: #333;
+}
+#ipt1,#ipt2,#ipt3,#ipt4,#ipt5,#ipt7,#ipt8{
+	width: 100%;
+    height: 48px;
+    color: #333;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    font-size: 18px;
+    font-family: "微软雅黑";
+}
+.form-control-feedback{
+	width: 100%;
+    height: 48px;
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+#ipt6{
+	width: 100%;
+    height: 58px;
+    background: orange;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 28px;
+    font-family: "微软雅黑";
+    margin-top:35px;
+}
+.login{
+	text-align: right;
+    margin: 20px 0 7px 0;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+}
+
+
+i{
+    color: red;
+    font-size: 12px;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+    {% for user in users %}
+        <p>{{ user.id }} 姓名:{{ user.name }} 年龄:{{ user.age }}</p>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+{% extends 'bootstrap/base.html' %}
+{%- block styles %}
+    {{ super() }}
+    <link href="{{url_for('static',filename='login/css.css')}}" rel="stylesheet">
+{%- endblock styles %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+{% block navbar %}
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">导航>></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="{{ url_for('bluename.index') }}">首页</a></li>
+            <li><a href="{{ url_for('bluename.home') }}">主页</a></li>
+            <li><a href="{{ url_for('bluename.cart') }}">购物车</a></li>
+            <li><a href="{{ url_for('bluename.about') }}">关于我们</a></li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user %}
+                    <li><a href="#"  style="color: orange">欢迎【{{ user.name }}】</a></li>
+                    <li><a href="{{ url_for('bluename.loginout') }}">退出</a></li>
+                {% else %}
+                    <li><a href="#" data-toggle="modal" data-target="#login">登录</a></li>
+                    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form action="{{ url_for('bluename.login') }}" method="post">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">登录界面</h4>
+                                    </div>
+                                    <div class="form-group has-feedback" id="ltelephone">
+                                        <div class=" float_l input-group">
+                                            <div class="input-group-addon">手机号</div>
+                                            <input id="ipt1" class="form-control" type="text" name="ltelephone"
+                                                   placeholder="请输入手机号"/>
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        </div>
+                                        <i></i>
+                                    </div>
+
+                                    <div class="clear" style="height: 10px"></div>
+
+                                    <div class="form-group has-feedback" id="lpassword">
+                                        <div class="float_l  input-group">
+                                            <div class="input-group-addon">密码</div>
+                                            <input id="ipt4" class="form-control" type="password" name="lpassword"
+                                                   placeholder="请输入密码"/>
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        </div>
+                                        <i></i>
+                                    </div>
+
+                                    <div class="clear" style="height: 10px"></div>
+
+                                    <div class="form-group has-feedback" id="lpasschid">
+                                        <div class="float_l  input-group">
+                                            <div class="input-group-addon">验证</div>
+                                            <input id="ipt5" class="form-control" type="password" name="lpasschid"
+                                                   placeholder="再次输入密码"/>
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        </div>
+                                        <i></i>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        <button type="submit" class="btn btn-primary">登录</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <li><a href="#" data-toggle="modal" data-target="#register">注册</a></li>
+                    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form action="{{ url_for('bluename.register') }}" method="post">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">注册界面</h4>
+                                    </div>
+                                    <div class="form-group has-feedback" id="telephone">
+                                        <div class="float_l  input-group">
+                                            <div class="input-group-addon">手机号</div>
+                                            <input id="ipt4" class="form-control" type="text" name="telephone"
+                                                   placeholder="请输入常用手机号"/>
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        </div>
+                                        <i></i>
+                                    </div>
+
+                                    <div class="clear" style="height: 10px"></div>
+
+                                    <div class="form-group has-feedback" id="password">
+                                        <div class="float_l  input-group">
+                                            <div class="input-group-addon">密码</div>
+                                            <input id="ipt4" class="form-control" type="password" name="password"
+                                                   placeholder="请输入密码"/>
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        </div>
+                                        <i></i>
+                                    </div>
+
+                                    <div class="clear" style="height: 10px"></div>
+
+                                    <div class="form-group has-feedback" id="passchid">
+                                        <div class="float_l  input-group">
+                                            <div class="input-group-addon">验证</div>
+                                            <input id="ipt5" class="form-control" type="password" name="passchid"
+                                                   placeholder="再次输入密码"/>
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        </div>
+                                        <i></i>
+                                    </div>
+
+                                    <div class="clear" style="height: 10px"></div>
+
+                                    <div class="form-group has-feedback" id="name">
+                                        <div class="float_l  input-group">
+                                            <div class="input-group-addon">昵称</div>
+                                            <input id="ipt5" class="form-control" type="text" name="name"
+                                                   placeholder="请输入昵称"/>
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        </div>
+                                        <i></i>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        <button type="submit" class="btn btn-primary">注册</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endif %}
+            </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+{%- endblock navbar %}
+
+{% block content -%}
+
+{#    轮播图#}
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            {% for lunbo in lunbos %}
+                {% if loop.first %}
+                    <div class="item active">
+                    <img src="{{ lunbo.img }}" alt="{{ lunbo.name }}">
+                    <div class="carousel-caption">
+                        {{ lunbo.name }}
+                    </div>
+                </div>
+                {% else %}
+                    <div class="item">
+                    <img src="{{ lunbo.img }}" alt="{{ lunbo.name }}">
+                    <div class="carousel-caption">
+                        {{ lunbo.name }}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="row goodlist">
+    {% for goods in paginate.items %}
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="{{ goods.icon }}" alt="{{ goods.name }}">
+                <div class="caption">
+                    <h3>{{ goods.name }}</h3>
+                    <p>{{ goods.detail }}</p>
+                    <p style="color: red">￥{{ goods.price }} RMB</p>
+                    <p><a href="#" class="btn btn-default" role="button">详情</a> <a href="#" class="btn btn-primary"
+                                                                                       role="button">加入购物车</a></p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    </div>
+    {% from 'mymacro.html' import pagination_widget %}
+    {{ pagination_widget(paginate,'bluename.index') }}
+{%- endblock content %}
+
+
+{% block scripts %}
+    {{ super() }}
+    <script src="/static/login/js.js"></script>
+{%- endblock scripts %}
+

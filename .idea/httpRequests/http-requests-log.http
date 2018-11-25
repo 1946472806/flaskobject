@@ -1,0 +1,104 @@
+GET http://127.0.0.1:5000/getresponse/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-13T123538.300.html
+
+###
+
+GET http://127.0.0.1:5000/getresponse/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-13T123456.200.html
+
+###
+
+GET http://127.0.0.1:5000/getresponse/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:5000/getresponse/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:5000/getmethods/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T115116.200.html
+
+###
+
+GET http://127.0.0.1:5000/getmethods/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T115115.200.html
+
+###
+
+GET http://127.0.0.1:5000/getmethods/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T115114.200.html
+
+###
+
+GET http://127.0.0.1:5000/getmethods/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T115113.200.html
+
+###
+
+POST http://127.0.0.1:5000/getmethods/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T115108.200.html
+
+###
+
+POST http://127.0.0.1:5000/getmethods
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T115057.500.html
+
+###
+
+POST http://127.0.0.1:5000/getmethods
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T115035.405.html
+
+###
+
+POST http://127.0.0.1:5000/getmethods
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:5000/getmethods
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-12T114442.200.html
+
+###
+
+GET http://127.0.0.1:5000/getmethods
+Accept: */*
+Cache-Control: no-cache
+
+###
+

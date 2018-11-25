@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css"/>
+		
+	</head>
+	<body>
+		<div id="top">
+			<div class="contaier" style="height:35px;">
+				<div class="top_r">
+					<span>
+                        <img id="topimg" src="" style="height: 20px;width: 20px;display: inline-block;">
+                        <a id="login" href="../static/login.html" title="登录" class="top_r_load">登录</a>
+                        <a id="register" href="../static/register.html" title="注册">注册</a>
+					</span>
+{#					<span id="shop">#}
+{#						<a href="/car/" class="relative" title="购物袋" style="margin-left: 18px;padding-left: 20px;border-left: solid 1px #d9d9d9;">#}
+{#							<span style="background: url({% static 'img/headico.png' %})-37px -2px no-repeat;height:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>#}
+{#							购物袋（<i id="total_num"></i>）#}
+{#						</a>#}
+{#						#}
+{#					</span>#}
+{#					<div id="headershop">#}
+{#		                <div class="header_sj" style="margin-left:140px;"></div>#}
+{#		                <div class="headercar">#}
+{#		                 #}
+{#		                    <div class="kong" style="text-align: center;padding:30px 0;font-size:12px;">您的购物袋是空的</div>#}
+{#		                	<div class="cart_out" style="display: block;">#}
+{#								<div class="car_t"><strong>我的商品</strong></div>#}
+{#								<div class="car_show">#}
+{#									<ul id="product2_li">#}
+{#                                    {% if username %}#}
+{#                                        {% for gcar in goodscar %}#}
+{#                                            <li class="product2" style="overflow:hidden;">#}
+{#                                                <img src="{% static gcar.goods.img %}" style="width:80px;height:80px;float:left;"/>#}
+{#                                                <p num="{{ gcar.num }}" price="{{ gcar.goods.price_good }}" style="color:#CCCCCC;float: left;padding-left:10px;line-height:24px;">#}
+{#                                                    <a href="" style="font-size:16px;">{{ gcar.goods.said1 }}&nbsp;{{ gcar.goods.said2 }}</a><br />{{ gcar.goods.wen }}#}
+{#                                                    <br />#}
+{#                                                    <span  style="color: #555555;"><i>{{ gcar.goods.unit }}</i>{{ gcar.goods.price_good }}</span>&nbsp;&nbsp; X<span>{{ gcar.num }}</span>#}
+{##}
+{#                                                </p>#}
+{#                                                <div class="dell float_r">#}
+{#                                                    <a href="{% url 'app:delcar' gcar.goods.id %}" style="font-size:28px;" class="del">╳</a>#}
+{#                                                </div>#}
+{#                                                <div class="clear"></div>#}
+{#                                            </li>#}
+{#                                        {% endfor %}#}
+{#                                    {% endif %}#}
+{#                                    </ul>#}
+{#									#}
+{#									#}
+{#								</div>#}
+{#								<div class="car_b">#}
+{#									<div class="to_l">#}
+{#										<span>商品总计 ： ￥  </span>#}
+{#										<span class="totalprice"></span>#}
+{#									</div>#}
+{#									<div class="to_r">#}
+{#										<a href="car.html" class="settlement" style="font-size:18px;color: white;">去结算</a>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#		                #}
+{#		                </div>#}
+{#					</div>#}
+					
+				</div>
+			</div>
+		</div>
+		
+		<!--导航-->
+		<div id="nav">
+			<div class="contaier" style="overflow: hidden;">
+				<ul class="list_zong">
+					<li><a href="#" title="首页">首页</a></li>
+					<li><a href="#" title="新近单品" id="menu1">新近单品</a></li>
+					<li><a href="#" title="全球购">全球购</a></li>
+					<li><a href="#" title="女士" id="menu2">女士</a></li>
+					<li><a href="#" title="男仕" id="menu3">男仕</a></li>
+					<li><a href="#" title="童装"id="menu4" >童装</a></li>
+					<li><a href="#" title="腕表" id="menu5">腕表</a></li>
+					<li><a href="#" title="品牌" id="menu6">品牌</a></li>
+					<li><a href="#" title="Mzine">Mzine</a></li>
+					
+				</ul>
+				
+			</div>
+		</div>
+		
+			<!--内容-->
+		<div id="main" class="relative">
+            <div class="big">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div class="row goodlist">
+
+                </div>
+                <div id="more">点击加载更多...</div>
+            </div>
+
+		</div>
+	</body>
+    <!--轮播大图-->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/index.js"></script>
+</html>
+
